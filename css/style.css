@@ -19,6 +19,9 @@ body {
 .mt20 {
   margin-top: 20px; }
 
+.ovfh {
+  overflow: hidden; }
+
 .intro-section {
   margin-top: 60px; }
 
@@ -371,34 +374,49 @@ footer {
   .tvs-cards h4 {
     margin-top: 45px; }
 
-.tvs-panel {
+.panel-close {
   position: absolute;
-  top: 8px;
-  left: 0px;
-  right: 0px;
-  padding: 3em;
-  z-index: 9;
-  background-color: #fafafa;
-  transform: translateX(100%);
-  transition: all 0.7s cubic-bezier(0, 0.7, 0.2, 1.1); }
+  right: 0;
+  top: 20px;
+  font-size: 40px;
+  cursor: pointer; }
+  .panel-close:hover {
+    color: red; }
+
+.panel-header {
+  position: fixed;
+  top: -50px;
+  width: 90%;
+  height: 50px;
+  transition: top 0.3s 0s; }
+
+.tvs-panel {
+  visibility: hidden;
+  transition: visibility 0s 0.6s; }
   .tvs-panel.active {
-    transform: translateX(0);
-    -webkit-box-shadow: 0 10px 25px #111;
-    -moz-box-shadow: 0 10px 25px #111;
-    -ms-box-shadow: 0 10px 25px #111;
-    box-shadow: 0 10px 25px #111; }
-  .tvs-panel h1 span {
-    font-size: 14px; }
+    visibility: visible;
+    transition: visibility 0s 0s; }
+    .tvs-panel.active .panel-header {
+      top: 0;
+      transition: top 0.3s 0.3s; }
+    .tvs-panel.active .tvs-list {
+      transform: translate3d(0, 0, 0);
+      transition-delay: 0s; }
 
 .tvs-list {
-  display: none; }
-  .tvs-list h5 {
-    color: #a29c99;
-    margin-bottom: 5px; }
-  .tvs-list p {
-    color: #222222;
-    margin-left: 1em;
-    line-height: 12px; }
+  /*...*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s;
+  transform: translate3d(100%, 0, 0);
+  background-color: #fff;
+  z-index: 9999;
+  overflow: auto; }
 
 .tvs-list-container {
   margin-top: 15px;
@@ -415,18 +433,5 @@ footer {
     vertical-align: top;
     margin-bottom: 15px;
     width: 100%; }
-
-.panel-close {
-  position: absolute;
-  right: 0;
-  top: 20px;
-  font-size: 40px;
-  cursor: pointer; }
-  .panel-close:hover {
-    color: red; }
-
-.panel-header {
-  position: relative;
-  border-bottom: 1px solid #fd8204; }
 
 /*# sourceMappingURL=style.css.map */

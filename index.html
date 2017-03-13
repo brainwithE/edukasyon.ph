@@ -21,7 +21,7 @@
 							<span class="navbar-hamburger__line"></span>
 						</div>
 						<a class="navbar-search-icon" id="uni_search_btn" data-toggle="collapse" data-target="#uni_search">
-							<i class="fa fa-search mobile"></i>
+							<i class="fa fa-search mobile" title="Return"></i>
 						</a>
 					</div>
 				</div>
@@ -172,10 +172,20 @@
 
 	<div class="tvs-panel">
 		<div class="tvs-list" id="manila">
-			Manila
+			<div class="panel-header">
+				<h1>Manila <span>NCR</span></h1>
+				<i class="fa fa-times panel-close" aria-hidden="true"></i>
+			</div>
+			<div class="container tvs-list-container"> 
+				<div>
+					<h5>102 MNL TRAINING CENTER INC</h5>
+					<p>#1115 Lirio cor. San Antonio St., Camarin, Manila City</p>
+				</div>
+			</div>
 		</div>
+
 		<div class="tvs-list" id="caloocan">
-			<div class="panel-header container">
+			<div class="panel-header">
 				<h1>Caloocan <span>NCR</span></h1>
 				<i class="fa fa-times panel-close" aria-hidden="true"></i>
 			</div>
@@ -418,6 +428,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</div>
 
 </body>
@@ -434,17 +445,21 @@
 
 	$.ajaxSetup({cache:false});
   $(".tvs-cards").click(function(){
-  		$(".tvs-panel").addClass("active");
-      var province = $(this).data("target")
+      var province = $(this).data("target");
+      $(".tvs-panel").addClass("active");
+      $("body").addClass("ovfh");
+      // $("tvs-list".province).css("display","block");
 
-      $(province).show();
       // $(".tvs-panel").text(province);
-  return false;
+  	return false;
   });
 
   $(".panel-close").click(function(){
   	$(".tvs-panel").removeClass("active");
-  	$("body").css("height","100%");
+  	$("body").removeClass("ovfh");
+  	(".tvs-list").hide();
+
+  	return true;
   });
 
 
