@@ -1,0 +1,44 @@
+@font-face {
+  font-family: $font-poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: $font-rubik;
+  src: url(../fonts/Rubik-Regular.ttf);
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.intro-section {
+	margin-top: $header-height - 5;
+}
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+
+section {
+  padding: 1em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-rubik;
+}

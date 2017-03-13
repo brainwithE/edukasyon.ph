@@ -1,0 +1,149 @@
+.section-tvs {
+  background-color: $light-gray;
+}
+
+#tvs-container{
+  -webkit-backface-visibility: hidden;
+}
+
+#tvs-container .mix{
+  display: none;
+  background: #fff;
+}
+
+.controls {
+  @include box-shadow(0 20px 40px -15px rgba(0,0,0,0.09));
+  @include border-radius(4px);
+
+  .filter {
+    list-style: none;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 5px 15px;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #888;
+    white-space: nowrap;
+    border-bottom: 1px solid #f6f6f6;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &.active {
+      background-color: $orange;
+      color: #fff;
+    }
+
+    span {
+      display: block;
+      font-size: 12px;
+    }
+  }
+}
+
+.tvs-cards {
+  position: relative;
+  padding: 1em;
+  width: 32%;
+  height: 120px;
+  margin:.5% .5% 2%;
+  cursor: pointer;
+  vertical-align: top;
+  @include box-shadow(0 20px 40px -15px rgba(0,0,0,0.09));
+
+  &:hover {
+    @include box-shadow(0 1px 10px rgba(108,125,142,0.3));
+  }
+
+  span {
+    line-height: 0;
+    font-size: 12px;
+  }
+
+  .card-region {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 14px;
+    padding: 5px;
+    background-color: #ddd;
+  }
+
+  h4 {
+    margin-top: 45px;
+  }
+}
+
+.tvs-panel {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  right: 0px;
+  padding: 3em;
+  z-index: 9;
+  background-color: #fafafa;
+  transform: translateX(100%);
+  transition: all .7s cubic-bezier(0,.7,.2,1.1);
+
+  &.active {
+    transform: translateX(0);   
+    @include box-shadow(0 10px 25px #111);
+  }
+
+  h1 {
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+.tvs-list {
+  display: none;
+
+  h5{
+    color: $gray;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: $black;
+    margin-left: 1em;
+    line-height: 12px;
+  }
+
+}
+
+.tvs-list-container {
+  margin-top: 15px;
+  @include column-width(16em);
+  @include column-gap(1em);
+
+ &>div {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 15px;
+    width:  100%; 
+  }
+} 
+
+.panel-close {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  font-size: 40px;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.panel-header {
+  position: relative;
+  border-bottom: 1px solid $orange;
+}

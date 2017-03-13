@@ -1,0 +1,40 @@
+.page-header {
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  opacity: 3;
+  background: url("../images/header.jpg");
+  height: 300px;
+  padding: 0;
+  margin-bottom: 0;
+
+  .form-control {
+    padding: 10px;
+  }
+}
+
+.page-header-title {
+  overflow: hidden;
+  display: table-cell;
+  height: 300px;
+  width: 975px;
+  vertical-align: middle;
+  text-align: center;
+
+  h1 {
+    font-size: 32px;
+    color: #ffffff;
+	}
+}
+
+.page-header-subtitle {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+#schools-search .input-group-btn.dropdown {
+	width: 30%;
+	border-left: 1px solid $gray;
+}

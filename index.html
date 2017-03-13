@@ -1,0 +1,452 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Technical-Vocational Centers | Edukasyon.ph</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-fixed-top top-navigation">
+			<div class="navbar-padding">
+				<div class="navbar-header">
+					<a class="navbar-brand logo-container" title="Edukasyon.ph">
+						<img src="images/logo.png"/>
+					</a>
+					<div class="navbar-nav">
+						<div class="navbar-toggle">
+							<span class="navbar-hamburger__line"></span>
+						</div>
+						<a class="navbar-search-icon" id="uni_search_btn" data-toggle="collapse" data-target="#uni_search">
+							<i class="fa fa-search mobile"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="navbar-nav navbar-left navbar-search" id="uni_search">
+					<div class="col-lg-12 nav-search-container no-padding">
+						<form id="generic-search" class="input-group no-margin" action="/school/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+							<span class="input-group-btn dropdown">
+								<select name="type" id="schools-search-options" class="form-control generic-search-type dropdown btn-select"><option selected="selected" value="school">Schools</option>
+								<option value="course">Courses</option>
+								<option value="scholarship">Scholarships</option>
+								<option value="abroad">Study Abroad</option></select>
+							</span>
+							<div class="navbar-search-icon">
+								<i class="fa fa-search"></i>
+							</div>
+							<input class="form-control input-uniSearch" name="q" placeholder="Search" type="search">
+						</form>
+					</div>
+				</div>
+				<div class="navbar-nav navbar-right">
+					<div class="navbar-menu fadein" id="main-nav">
+						<ul class="nav navbar-nav navbar-items">
+							<li class="navbar-item dropdown">
+								<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#0" role="button">
+								Search &amp; Apply
+								</a>
+								<ul class="dropdown-menu" id="nav-search-item">
+									<li class="dropdown">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-item dropdown-toggle" data-toggle="dropdown" role="button">
+										Schools</a>
+										<ul class="dropdown-menu sub-menu" id="nav-schools">
+											<li><a class="dropdown-item" href="/schools/senior-high-schools">Senior High School</a></li>
+											<li><a class="dropdown-item" href="/schools/college">College</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a aria-expanded="false" aria-haspopup="true" class="dropdown-item dropdown-toggle" data-toggle="dropdown" role="button">
+										Courses</a>
+										<ul class="dropdown-menu sub-menu" id="nav-courses">
+											<li><a class="dropdown-item" href="/courses/senior-high-tracks">Senior High School Tracks</a></li>
+											<li><a class="dropdown-item" href="/courses/college">College Programs</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="dropdown-item" href="/scholarships">Scholarships</a>
+									</li>
+								</ul>
+							</li>
+							<li class="navbar-item"><a href="/study-abroad">Study Abroad</a></li>
+							<li class="dropdown navbar-item">
+								<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#0" role="button">
+								Advice
+								</a>
+								<ul class="dropdown-menu" id="nav-advice">
+									<li><a class="dropdown-item" href="/discover-careers">Choose your career</a></li>
+									<li><a class="dropdown-item" href="https://blog.edukasyon.ph/category/expert-guide" target="_blank">Expert Guide</a></li>
+									<li><a class="dropdown-item" href="https://blog.edukasyon.ph" target="_blank">Daily Advice</a></li>
+									<li><a class="dropdown-item" href="https://blog.edukasyon.ph/category/study-abroad/" target="_blank">Studying Abroad</a></li>
+								</ul>
+							</li>
+
+							<li class="dropdown navbar-item">
+								<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#0" role="button">
+								About Us</a>
+								<ul class="dropdown-menu" id="nav-aboutus">
+									<li><a class="dropdown-item" href="/about-us">Advocacy</a></li>
+									<li><a class="dropdown-item" href="/team">Team</a></li>
+									<li><a class="dropdown-item" href="/partners-and-testimonials">Partners &amp; Testimonials</a></li>
+									<li><a class="dropdown-item" href="/join-us">Join Us</a></li>
+									<li><a class="dropdown-item" target="_blank" href="https://blog.edukasyon.ph/category/news/">What’s New</a></li>
+								</ul>
+							</li>
+							<li class="navbar-item"><a class="btn btn-login" data-target="#signin_modal" data-toggle="modal" href="#signin_modal" id="signin">Login</a></li>
+							<li class="navbar-item"><a class="btn btn-register" id="register" href="/users/sign_up">Register for free</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section class="page-header intro-section">
+		<div class="container" id="main-search-bar">
+			<div class="row">
+				<div class="col-sm-10 col-sm-push-1">
+					<div class="page-header-title">
+						<h1>Technical-Vocational Centers</h1>
+						<span class="page-header-subtitle mb20">Apply to TESDA-accredited Tech-Voc schools</span>
+						<form id="schools-search" class="input-group mt20" action="/school/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+							<input type="text" name="q" id="q" class="form-control" placeholder="Enter school name">
+							<span class="input-group-btn dropdown btn-select">
+								<select name="program_level" id="schools-search-options" class="form-control"><option value="senior high">Senior High School</option>
+								<option value="college">College / University</option>
+								<option value="graduate studies">Graduate Studies</option>
+								<option selected="selected" value="techvoc">Tech-Voc</option>
+								<option value="learning centers">Learning Centers</option></select>
+							</span>
+							<span class="input-group-btn"><button name="button" type="submit" class="btn btn-search"><i class="fa fa-search"></i>
+							</button></span>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-tvs">
+		<div class="container">
+
+		<ul class="col-sm-3 no-padding controls">
+			<li class="filter active" data-filter="all">ALL</li>
+			<li class="filter" data-filter=".ncr">NCR <span>National Capital Region</span></li>
+			<li class="filter" data-filter=".region-1">REGION I <span>Ilocos Region</span></li>
+			<li class="filter" data-filter=".region-2">REGION II <span>Cagayan Valley</span></li>
+			<li class="filter" data-filter=".region-3">REGION III <span>Central Luzon</span></li>
+			<li class="filter" data-filter=".region-4a">REGION IV - A <span>Calabarzon</span></li>
+			<li class="filter" data-filter=".region-4b">REGION IV - B <span>Mimaropa</span></li>
+			<li class="filter" data-filter=".region-5">REGION V <span>Bicol Region</span></li>
+			<li class="filter" data-filter=".region-6">REGION VI <span>Western Visayas</span></li>
+			<li class="filter" data-filter=".region-7">REGION VII <span>Central Visayas</span></li>
+			<li class="filter" data-filter=".region-8">REGION VIII <span>Eastern Visayas</span></li>
+			<li class="filter" data-filter=".region-9">REGION IX <span>Zamboanga Peninsula</span></li>
+			<li class="filter" data-filter=".region-10">REGION X <span>Northern Mindanao</span></li>
+			<li class="filter" data-filter=".region-11">REGION XI <span>Davao Region</span></li>
+			<li class="filter" data-filter=".region-12">REGION XII <span>Soccsksargen</span></li>
+			<li class="filter" data-filter=".region-13">REGION XIII <span>Caraga</span></li>
+			<li class="filter" data-filter=".region-armm">REGION ARMM <span>Autonomous Region of Muslim Mindanao</span></li>
+			<li class="filter" data-filter=".region-car">REGION CAR <span>Cordillera Administrative Region</span></li>
+		</ul>
+
+		<div class="col-sm-9" id="tvs-container">
+			<div class="mix tvs-cards ncr" data-target="#manila">
+				<h4>Manila</h4><span>XX centers found</span><span class="card-region">NCR</span>
+			</div>
+			<div class="mix tvs-cards ncr" data-target="#caloocan">
+				<h4>Caloocan</h4><span>XX centers found</span><span class="card-region">NCR</span>
+			</div>
+
+		  <div class="mix tvs-cards region-1" data-target="#ilocos">
+		  	<h4>Ilocos Del Norte</h4><span>XX centers found</span><span class="card-region">Region 1</span>
+		  </div>
+		  <div class="mix tvs-cards region-2" data-target="#">
+		  	<h4>Cagayan</h4><span>XX centers found</span><span class="card-region">Region 2</span>
+		  </div>
+		</div>
+	</section>
+
+	<div class="tvs-panel">
+		<div class="tvs-list" id="manila">
+			Manila
+		</div>
+		<div class="tvs-list" id="caloocan">
+			<div class="panel-header container">
+				<h1>Caloocan <span>NCR</span></h1>
+				<i class="fa fa-times panel-close" aria-hidden="true"></i>
+			</div>
+			<div class="container tvs-list-container"> 
+				<div>
+					<h5>102 GEM TRAINING CENTER INC</h5>
+					<p>#1115 Lirio cor. San Antonio St., Camarin, Caloocan City</p>
+				</div>
+				<div>
+					<h5>3R MANPOWER AND TESTING CENTER, INC.</h5>
+					<p>9th Ave., Caloocan City</p>
+				</div>
+				<div>
+					<h5>ABE INTERNATIONAL BUSINESS COLLEGE-CALOOCAN CAMPUS, INC.</h5>
+					<p>328 Big Orange Bldg. Caloocan City</p>
+				</div>
+				<div>
+					<h5>ACCESS COMPUTER AND TECHNICAL SCHOOLS</h5>
+					<p>2nd & 3rd Floors Consuelo Building, EDSA corner Benin Street, Monumento, Caloocan City</p>
+				</div>
+				<div>
+					<h5>ADVANCED COMPETENCIES TECHNOLOGICAL MANPOWER ACADEMY (ACTMA) INC.</h5>
+					<p>4/F 593-Bldg., Area-A Camarin Road, Almar, Caloocan City</p>
+				</div>
+				<div>
+					<h5>AGAPAS TRAINING CENTER</h5>
+					<p>138 11th Ave., Extension, DPHP Compound, Caloocan City</p>
+				</div>
+				<div>
+					<h5>AGILE INSTITUTE OF SLAUGHTERING AND BUTCHERING CORPORATION</h5>
+					<p>3772 Sinilyasi St. cor. Lapulapu Ave. Ext., Dagatdagatan, Caloocan city</p>
+				</div>
+				<div>
+					<h5>AMA COMPUTER COLLEGE CALOOCAN CITY, INC.</h5>
+					<p>263 UE Tech Road, Caloocan City</p>
+				</div>
+				<div>
+					<h5>AMA COMPUTER LEARNING CENTER OF CALOOCAN, INC.</h5>
+					<p>419 D & I Building EDSA,Caloocan City</p>
+				</div>
+				<div>
+					<h5>ARCHELOR SECURITY TRAINING CENTER, INC.</h5>
+					<p>No. 112 P. Burgos St., 10th Ave., Caloocan City</p>
+				</div>
+				<div>
+					<h5>ASIAN CAREGIVING AND TECHNOLOGY EDUCATION CENTERS, INC.</h5>
+					<p>A & A Bldg., 120 P. Jacinto cor. Boni Serrano St. Calaanan East, Caloocan City</p>
+				</div>
+				<div>
+					<h5>ASIAN INSTITUTE OF COMPUTER STUDIES</h5>
+					<p>410 DNI Bldg., EDSA, Caloocan City</p>
+				</div>
+				<div>
+					<h5>ASIAN SECURITY CAREER DEVELOPMENT CENTER</h5>
+					<p>Eliongsin Bldg., Caloocan City</p>
+				</div>
+				<div>
+					<h5>ASIANTOUCH INTERNATIONAL TRAINING INSTITUTE, INC. (CALOOCAN)</h5>
+					<p>1067 A. Capt. Samano Road, Camarin, Caloocan City</p>
+				</div>
+				<div>
+					<h5>ASSOCIATION OF CONSTRUCTION AND INFORMAL WORKERS (ACIW)</h5>
+					<p>LERC Bldg, Brgy. 185, Malaria, Caloocan City</p>
+				</div>
+				<div>
+					<h5>CALOOCAN CITY MANPOWER TRAINING CENTER (NORTH)</h5>
+					<p>Phase 1, Covered Court, Bagong Silang, Caloocan City</p>
+				</div>
+				<div>
+					<h5>CALOOCAN CITY MANPOWER TRAINING CENTER (SOUTH)</h5>
+					<p>Old MTC Bldg., Mabini St., Caloocan City</p>
+				</div>
+				<div>
+					<h5>CALOOCAN CITY MANPOWER TRAINING CENTER-CAMARIN</h5>
+					<p>Voc. Tech. Bldg., Brgy. 175, Libis, Camarin, Caloocan City</p>
+				</div>
+				<div>
+					<h5>CENTRO MANUFACTURING CORPORATION</h5>
+					<p>No. 2 Susano R d., Bo. Deparo, Novaliches, Caloocan City</p>
+				</div>
+				<div>
+					<h5>CHILD JESUS COLLEGE, INC.</h5>
+					<p>Phase IV, Bagong Silang. Caloocan City</p>
+				</div>
+				<div>
+					<h5>CIEVEROSE COLLEGE, INC.</h5>
+					<p>Cieverose College, Inc.</p>
+				</div>
+				<div>
+					<h5>CULINARY ARTS AND TECHNOLOGY TRAINING CENTER AND HOSPITALITY MANAGEMENT (CATCH), INC.</h5>
+					<p>Blk1 Unit 2 SM Homes Commercial Bldg. Susano Road, Novaliches North Caloocan City</p>
+				</div>
+				<div>
+					<h5>DATAMEX INSTITUTE OF COMPUTER TECHNOLOGY, INC.</h5>
+					<p>2nd Flr., Aurelio Bldg., III, 11th Ave., cor. Rizal Ave., Ext., Caloocan City</p>
+				</div>
+				<div>
+					<h5>DEMAZENOD SKILLS TRAINING CENTER-NOTREDAME OF GREATER MANILA</h5>
+					<p>14th Avenue Grace Park. Caloocan City</p>
+				</div>
+				<div>
+					<h5>DIVINE MERCY COLLEGE FOUNDATION</h5>
+					<p>Divine Mercy College Foundation</p>
+				</div>
+				<div>
+					<h5>EMMANUEL JOHN INSTITUTE OF SCIENCE AND TECHNOLOGY, INC.</h5>
+					<p>237 M. H. del Pilar St., Grace Park, Caloocan City</p>
+				</div>
+				<div>
+					<h5>ESCOLTAS EXECUTIVE PROTECTION ACADEMY, INC.</h5>
+					<p>Blk. 32, Lot 9, Phase 2, Dela Costa Homes II, Novaliches, Caloocan City</p>
+				</div>
+				<div>
+					<h5>FIRST ALLIANCE ACADEMIC INSTITUTE, INC.</h5>
+					<p>Room 318/312 Victoria Bldg., 11th Ave., Grace Park, Caloocan City</p>
+				</div>
+				<div>
+					<h5>FUN PINOY SKILLS TRAINING AND ASSESSMENT CENTER, INC.</h5>
+					<p>Unit B B130 L23 P. Galauran St. corner Corregidor St., 10th Ave., Brgy. 63, Caloocan City</p>
+				</div>
+				<div>
+					<h5>GLOBAL RECIPROCAL COLLEGES</h5>
+					<p>454 GRC Building, Rizal Ave., Extension corner 9th Avenue, Grace Park, Caloocan City</p>
+				</div>
+				<div>
+					<h5>HOLY CROSS TRAINING AND ASSESSMENT CENTER, INC.</h5>
+					<p>No. 6 Bangkal St., Amparo Village, Caloocan City</p>
+				</div>
+				<div>
+					<h5>IDPSI ACADEMY FOUNDATION, INC.</h5>
+					<p>3/F Rosewood Bldg., 10th Ave. corner M. H. Del Pilar, Caloocan City</p>
+				</div>
+				<div>
+					<h5>INFORMATICS COLLEGE CALOOCAN, INC.</h5>
+					<p>No. 380 Rizal Ave. Ext. corner 11th Ave., Grace Park, Caloocan City</p>
+				</div>
+				<div>
+					<h5>INTERFACE COMPUTER COLLEGE, INC.</h5>
+					<p>Doña Lolita Bldg. 2, 10th Avenue, Caloocan City</p>
+				</div>
+				<div>
+					<h5>INTERNATIONAL DIRECT PLACEMENT SPECIALIST, INC.</h5>
+					<p>Mezzanine Flr.CLC Bus. Center 425 Rizal Ave.Ext. Caloocan City</p>
+				</div>
+				<div>
+					<h5>INTERNATIONAL ELECTRONICS AND TECHNICAL INSTITUTE, INC.</h5>
+					<p>3/F Dytronics Corp. Bldg., EDSA, Monumento, Caloocan City</p>
+				</div>
+				<div>
+					<h5>INTERNATIONAL INSTITUTE OF HOSPITALITY SERVICES, INC.</h5>
+					<p>2/F Patrocinio Bldg., Camarin Road, Brgy. 175, Caloocan City</p>
+				</div>
+				<div>
+					<h5>INTERNATIONAL SKILLS AND TECHNOLOGY EDUCATION PROVIDER CORPORATION</h5>
+					<p>ICC Caloocan Campus Quirino Highway, Brgy. 180 ,Caloocan City</p>
+				</div>
+				<div>
+					<h5>LA CONSOLACION COLLEGE OF DEPARO, KALOOKAN CITY, INC.</h5>
+					<p>Saint Peter St., Villa Maria Subdivision, Deparo Road, Caloocan City</p>
+				</div>
+				<div>
+					<h5>LA VERDAD</h5>
+					<p>351 Bagong Barrio, EDSA, Monumento,Caloocan City</p>
+				</div>
+				<div>
+					<h5>LADY OF LOURDES HOSPITAL AND COLLEGES OF CAYBIGA, INC.</h5>
+					<p>15 Gen. Luis St. Caybiga, Caloocan City</p>
+				</div>
+				<div>
+					<h5>LIGA NG MAMAMAYANG PILIPINO, INC.</h5>
+					<p>553 A. Mabini St., Sangandaan, Caloocan City</p>
+				</div>
+				<div>
+					<h5>LORRAINE TECHNICAL SCHOOL OF CALOOCAN CITY, INC.</h5>
+					<p>184 Rizal Ave.Extension Monumento,Caloocan City</p>
+				</div>
+				<div>
+					<h5>MANILA CENTRAL UNIVERSITY</h5>
+					<p>EDSA, Caloocan City</p>
+				</div>
+				<div>
+					<h5>MARTINEZ TRAINING CENTER FOR HEALTH SERVICES, INC.</h5>
+					<p>3rd Flr. Martinez Memorial Hospital, 198 A. Mabini St., Maypajo, Caloocan City</p>
+				</div>
+				<div>
+					<h5>MIAJI TRAINING AND ASSESSMENT CENTRE’ INC.</h5>
+					<p>Block 10 Lot 2 Upper Peach Palm St. Whispering Subd., Llano Road, Caloocan City</p>
+				</div>
+				<div>
+					<h5>MONTESSORI PROFESSIONAL COLLEGE CALOOCAN CITY BRANCH INC.</h5>
+					<p>312 EDSA Grace Park, Caloocan City</p>
+				</div>
+				<div>
+					<h5>OUR LADY OF GRACE PARISH VOCATIONAL TRAINING SCHOOL INC.</h5>
+					<p>St. Eugene de Mazenod Ave., Grace Park Caloocan City</p>
+				</div>
+				<div>
+					<h5>PHILIPPINE DENTAL LABORATORY TECHNOLOGY TRAINING AND ASSESSMENT CENTER, INC.</h5>
+					<p>314-A EDSA, Brgy. 135 District 1, Caloocan City</p>
+				</div>
+				<div>
+					<h5>PHILIPPINE ORIENTAL MEDICINE AND ACUPUNTURE COLLEGE, INC.</h5>
+					<p>2nd Floor Bonifacio Monumento EDSA Caloocan City</p>
+				</div>
+				<div>
+					<h5>SAINT CLARE COLLEGE OF CALOOCAN</h5>
+					<p>Zabarte Rd. cor. Almar, Camarin, Caloocan city</p>
+				</div>
+				<div>
+					<h5>ST. LOUISE DE MARILLAC INTERNATIONAL FOUNDATION, INC.</h5>
+					<p>B34 L4 Adelfa St., Evergreen Executive Village, Bagumbong, Caloocan City</p>
+				</div>
+				<div>
+					<h5>STI COLLEGE OF KALOOKAN, INC.</h5>
+					<p>357 G.M. Sandoval Bldg., J. Tedoro Street, 10th Avenue, Caloocan</p>
+				</div>
+				<div>
+					<h5>SYSTEM PLUS COMPUTER COLLEGE</h5>
+					<p>141-143 10th Avenue, Caloocan City</p>
+				</div>
+				<div>
+					<h5>TESCO-TECHNICAL TRAINING CENTER, INC.</h5>
+					<p>240 M.H. Del Pilar St., cor. 10th Avenue, Grace Park, Caloocan City</p>
+				</div>
+				<div>
+					<h5>UNIVERSITY OF THE EAST</h5>
+					<p>No. 105 Samson Road, Caloocan City</p>
+				</div>
+				<div>
+					<h5>WELDING INDUSTRIES OF THE PHILIPPINES</h5>
+					<p>Baesa, Caloocan City</p>
+				</div>
+				<div>
+					<h5>WORLD CITI COLLEGES, INC.</h5>
+					<p>William Shaw St. Caloocan City</p>
+				</div>
+				<div>
+					<h5>XAVIER TECHNICAL TRAINING CENTER CORPORATION</h5>
+					<p>#524-E Epifanio Delos Santos Avenue, Caloocan City</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+	  $('#tvs-container').mixItUp();
+
+	});
+
+	$.ajaxSetup({cache:false});
+  $(".tvs-cards").click(function(){
+  		$(".tvs-panel").addClass("active");
+      var province = $(this).data("target")
+
+      $(province).show();
+      // $(".tvs-panel").text(province);
+  return false;
+  });
+
+  $(".panel-close").click(function(){
+  	$(".tvs-panel").removeClass("active");
+  	$("body").css("height","100%");
+  });
+
+
+</script>
+</html>

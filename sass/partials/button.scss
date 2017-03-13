@@ -1,0 +1,42 @@
+.btn {
+	@include border-radius(4px);
+}
+
+.btn-login {
+  padding: 11px 20px !important;
+  color: #888 !important;
+  margin: 10px 0 0 12px !important;
+  background-color: transparent !important;
+  border: 2px solid #ddd !important;
+
+  &:hover,
+  &:focus {
+  	color: #fff !important;
+    border-color: #888 !important;
+    background-color: #888 !important;
+  }
+}
+
+.btn-register {
+  padding: 13px 30px !important;
+  color: #ffffff !important;
+  margin-top: 10px !important;
+  margin-left: 10px !important;
+  background-color: #3580de !important;
+}
+
+.btn-search {
+    float: right;
+    margin: 0;
+    position: relative;
+    height: 48px;
+    background-color: #fd8204;
+    color: #fff;
+    margin-left: 0;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    padding: 6px 20px;
+    min-width: 150px;
+}
