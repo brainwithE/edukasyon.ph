@@ -1,0 +1,55 @@
+.filter {
+  list-style: none;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #888;
+  white-space: nowrap;
+  border-bottom: 1px solid #f6f6f6;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $orange;
+  }
+
+  span {
+    display: block;
+    font-size: 12px;
+  }
+
+  &.head {
+    background: #fafafa;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  &.active {
+    background-color: $orange;
+    color: #fff;
+  }
+}
+
+.controls {
+  @include box-shadow(0 20px 40px -15px rgba(0,0,0,0.09));
+  @include border-radius(4px);
+
+  .panel {
+    margin-bottom: 0;
+    @include border-radius(0);
+    @include box-shadow(0);
+  }
+
+  .dropdown {
+    padding: 0;
+
+    &>li {
+      padding-left: 15px;
+    }
+  }
+}
+

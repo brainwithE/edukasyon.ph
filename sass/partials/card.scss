@@ -1,0 +1,61 @@
+#tvs-container{
+  -webkit-backface-visibility: hidden;
+}
+
+#tvs-container .mix{
+  display: none;
+  background: #fff;
+}
+
+.tvs-cards {
+  position: relative;
+  padding: 1em;
+  width: 32%;
+  height: 120px;
+  margin:.5% .5% 2%;
+  cursor: pointer;
+  vertical-align: top;
+  @include box-shadow(0 20px 40px -15px rgba(0,0,0,0.09));
+
+  &:hover {
+    @include box-shadow(0 1px 10px rgba(108,125,142,0.3));
+  }
+
+  span {
+    line-height: 0;
+    font-size: 12px;
+  }
+
+  .card-region {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 14px;
+    padding: 5px;
+    background-color: #ddd;
+  }
+
+  h4 {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tvs-cards {
+    width: 31%;
+  }
+}
+
+@media (max-width: 767px) {
+  .tvs-cards {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tvs-cards {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

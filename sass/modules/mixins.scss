@@ -19,6 +19,27 @@
           transition: $args;
 }
 
+@mixin transition-delay($args) {
+  -webkit-transition-delay: $args;
+     -moz-transition-delay: $args;
+      -ms-transition-delay: $args;
+          transition-delay: $args;
+}
+
+@mixin transition-duration($args) {
+  -webkit-transition-duration: $args;
+     -moz-transition-duration: $args;
+      -ms-transition-duration: $args;
+          transition-duration: $args;
+}
+
+@mixin transform($args) {
+  -webkit-transform: $args;
+     -moz-transform: $args;
+      -ms-transform: $args;
+          transform: $args;
+}
+
 @mixin column-width($input) {
   -webkit-column-width: $input;
      -moz-column-width: $input;
