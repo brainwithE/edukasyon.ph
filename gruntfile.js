@@ -44,13 +44,27 @@ module.exports = function(grunt){
 					ext: '.min.js'
 				}]
 			}
-		}
+		},
+		connect: {
+	    server: {
+	      options: {
+	        port: 8000,
+	        base: {
+	          path: 'www-root',
+	          options: {
+	            index: 'index.html',
+	            maxAge: 300000
+	          }
+	        }
+	      }
+	    }
+	  }
 	});
-
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.registerTask('default', ["watch"]);
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.registerTask('default', ["connect"]);
 
 };
